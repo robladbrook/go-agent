@@ -25,9 +25,9 @@
     ```
 
   When creating custom and external segments, we recommend using
-  [`newrelic.StartSegment()`](https://godoc.org/github.com/newrelic/go-agent#StartSegment)
+  [`newrelic.StartSegment()`](https://godoc.org/github.com/robladbrook/go-agent#StartSegment)
   and
-  [`newrelic.StartExternalSegment()`](https://godoc.org/github.com/newrelic/go-agent#StartExternalSegment),
+  [`newrelic.StartExternalSegment()`](https://godoc.org/github.com/robladbrook/go-agent#StartExternalSegment),
   respectively.
 
 * Added GoDoc badge to README.  Thanks to @mrhwick for the contribution!
@@ -53,7 +53,7 @@
 
 ## 1.10.0
 
-* Added new `RecordCustomMetric` method to [Application](https://godoc.org/github.com/newrelic/go-agent#Application).
+* Added new `RecordCustomMetric` method to [Application](https://godoc.org/github.com/robladbrook/go-agent#Application).
   This functionality can be used to track averages or counters without using
   custom events.
   * [Custom Metric Documentation](https://docs.newrelic.com/docs/agents/manage-apm-agents/agent-data/collect-custom-metrics)
@@ -61,12 +61,12 @@
 * Fixed import needed for logrus.  The import Sirupsen/logrus had been renamed to sirupsen/logrus.
   Thanks to @alfred-landrum for spotting this.
 
-* Added [ErrorAttributer](https://godoc.org/github.com/newrelic/go-agent#ErrorAttributer),
+* Added [ErrorAttributer](https://godoc.org/github.com/robladbrook/go-agent#ErrorAttributer),
   an optional interface that can be implemented by errors provided to
   `Transaction.NoticeError` to attach additional attributes.  These attributes are
   subject to attribute configuration.
 
-* Added [Error](https://godoc.org/github.com/newrelic/go-agent#Error), a type
+* Added [Error](https://godoc.org/github.com/robladbrook/go-agent#Error), a type
   that allows direct control of error fields.  Example use:
 
 ```go
@@ -87,7 +87,7 @@ txn.NoticeError(newrelic.Error{
 
 * Added support for [github.com/gin-gonic/gin](https://github.com/gin-gonic/gin)
   in the new `nrgin` package.
-  * [Documentation](http://godoc.org/github.com/newrelic/go-agent/_integrations/nrgin/v1)
+  * [Documentation](http://godoc.org/github.com/robladbrook/go-agent/_integrations/nrgin/v1)
   * [Example](examples/_gin/main.go)
 
 ## 1.8.0
@@ -102,21 +102,21 @@ txn.NoticeError(newrelic.Error{
 
 * Added support for [gorilla/mux](http://github.com/gorilla/mux) in the new `nrgorilla`
   package.
-  * [Documentation](http://godoc.org/github.com/newrelic/go-agent/_integrations/nrgorilla/v1)
+  * [Documentation](http://godoc.org/github.com/robladbrook/go-agent/_integrations/nrgorilla/v1)
   * [Example](examples/_gorilla/main.go)
 
 ## 1.6.0
 
 * Added support for custom error messages and stack traces.  Errors provided
   to `Transaction.NoticeError` will now be checked to see if
-  they implement [ErrorClasser](https://godoc.org/github.com/newrelic/go-agent#ErrorClasser)
-  and/or [StackTracer](https://godoc.org/github.com/newrelic/go-agent#StackTracer).
+  they implement [ErrorClasser](https://godoc.org/github.com/robladbrook/go-agent#ErrorClasser)
+  and/or [StackTracer](https://godoc.org/github.com/robladbrook/go-agent#StackTracer).
   Thanks to @fgrosse for this proposal.
 
 * Added support for [pkg/errors](https://github.com/pkg/errors).  Thanks to
   @fgrosse for this work.
-  * [documentation](https://godoc.org/github.com/newrelic/go-agent/_integrations/nrpkgerrors)
-  * [example](https://github.com/newrelic/go-agent/blob/master/_integrations/nrpkgerrors/nrpkgerrors.go)
+  * [documentation](https://godoc.org/github.com/robladbrook/go-agent/_integrations/nrpkgerrors)
+  * [example](https://github.com/robladbrook/go-agent/blob/master/_integrations/nrpkgerrors/nrpkgerrors.go)
 
 * Fixed tests for Go 1.8.
 
@@ -128,7 +128,7 @@ txn.NoticeError(newrelic.Error{
   `Memory/Heap/AllocatedObjects` metric.  This will soon be displayed on the "Go
   runtime" page.
 
-* If the [DatastoreSegment](https://godoc.org/github.com/newrelic/go-agent#DatastoreSegment)
+* If the [DatastoreSegment](https://godoc.org/github.com/robladbrook/go-agent#DatastoreSegment)
   fields `Host` and `PortPathOrID` are not provided, they will no longer appear
   as `"unknown"` in transaction traces and slow query traces.
 
@@ -142,7 +142,7 @@ txn.NoticeError(newrelic.Error{
  [Slow Query Documentation](https://docs.newrelic.com/docs/apm/applications-menu/monitoring/viewing-slow-query-details)
 
 * Added new
-[DatastoreSegment](https://godoc.org/github.com/newrelic/go-agent#DatastoreSegment)
+[DatastoreSegment](https://godoc.org/github.com/robladbrook/go-agent#DatastoreSegment)
 fields `ParameterizedQuery`, `QueryParameters`, `Host`, `PortPathOrID`, and
 `DatabaseName`.  These fields will be shown in transaction traces and in slow
 query traces.

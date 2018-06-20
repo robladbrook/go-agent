@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/newrelic/go-agent/internal/crossagent"
+	"github.com/robladbrook/go-agent/internal/crossagent"
 )
 
 func TestStartEndSegment(t *testing.T) {

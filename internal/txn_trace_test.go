@@ -5,7 +5,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/newrelic/go-agent/internal/cat"
+	"github.com/robladbrook/go-agent/internal/cat"
 )
 
 func TestTxnTrace(t *testing.T) {

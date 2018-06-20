@@ -7,8 +7,8 @@ import (
 	"net/url"
 	"time"
 
-	"github.com/newrelic/go-agent/internal/cat"
-	"github.com/newrelic/go-agent/internal/sysinfo"
+	"github.com/robladbrook/go-agent/internal/cat"
+	"github.com/robladbrook/go-agent/internal/sysinfo"
 )
 
 // TxnEvent represents a transaction.
@@ -124,7 +124,7 @@ var (
 	errMalformedSegment = errors.New("segment identifier malformed: perhaps unsafe code has modified it?")
 	errSegmentOrder     = errors.New(`improper segment use: the Transaction must be used ` +
 		`in a single goroutine and segments must be ended in "last started first ended" order: ` +
-		`see https://github.com/newrelic/go-agent/blob/master/GUIDE.md#segments`)
+		`see https://github.com/robladbrook/go-agent/blob/master/GUIDE.md#segments`)
 )
 
 func endSegment(t *TxnData, start SegmentStartTime, now time.Time) (segmentEnd, error) {

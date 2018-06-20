@@ -1,4 +1,4 @@
-# New Relic Go Agent [![GoDoc](https://godoc.org/github.com/newrelic/go-agent?status.svg)](https://godoc.org/github.com/newrelic/go-agent)
+# New Relic Go Agent [![GoDoc](https://godoc.org/github.com/robladbrook/go-agent?status.svg)](https://godoc.org/github.com/robladbrook/go-agent)
 
 ## Description
 
@@ -28,10 +28,10 @@ Installing the Go Agent is the same as installing any other Go library.  The
 simplest way is to run:
 
 ```
-go get github.com/newrelic/go-agent
+go get github.com/robladbrook/go-agent
 ```
 
-Then import the `github.com/newrelic/go-agent` package in your application.
+Then import the `github.com/robladbrook/go-agent` package in your application.
 
 #### Step 1: Create a Config and an Application
 
@@ -123,7 +123,7 @@ import (
 	"net/http"
 	"os"
 
-	"github.com/newrelic/go-agent"
+	"github.com/robladbrook/go-agent"
 )
 
 func helloHandler(w http.ResponseWriter, r *http.Request) {

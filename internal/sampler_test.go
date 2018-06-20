@@ -4,7 +4,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/newrelic/go-agent/internal/logger"
+	"github.com/robladbrook/go-agent/internal/logger"
 )
 
 func TestGetSample(t *testing.T) {

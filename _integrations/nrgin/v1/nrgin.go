@@ -9,8 +9,8 @@ import (
 	"net/http"
 
 	"github.com/gin-gonic/gin"
-	"github.com/newrelic/go-agent"
-	"github.com/newrelic/go-agent/internal"
+	"github.com/robladbrook/go-agent"
+	"github.com/robladbrook/go-agent/internal"
 )
 
 func init() { internal.TrackUsage("integration", "framework", "gin", "v1") }

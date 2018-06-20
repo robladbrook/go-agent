@@ -25,10 +25,10 @@ Installing the Go Agent is the same as installing any other Go library.  The
 simplest way is to run:
 
 ```
-go get github.com/newrelic/go-agent
+go get github.com/robladbrook/go-agent
 ```
 
-Then import the `github.com/newrelic/go-agent` package in your application.
+Then import the `github.com/robladbrook/go-agent` package in your application.
 
 ## Config and Application
 
@@ -87,7 +87,7 @@ if nil == err {
 
 If you are using `logrus` and would like to send the agent's log messages to its
 standard logger, import the
-`github.com/newrelic/go-agent/_integrations/nrlogrus` package, then set:
+`github.com/robladbrook/go-agent/_integrations/nrlogrus` package, then set:
 
 ```go
 config.Logger = nrlogrus.StandardLogger()

@@ -5,7 +5,7 @@ import (
 	"encoding/json"
 	"errors"
 
-	"github.com/newrelic/go-agent/internal/jsonx"
+	"github.com/robladbrook/go-agent/internal/jsonx"
 )
 
 // TxnDataHeader represents a decoded TxnData header.
